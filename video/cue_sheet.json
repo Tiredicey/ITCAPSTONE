@@ -1,0 +1,552 @@
+{
+ "bpm": 140,
+ "sr": 48000,
+ "duration": 44.57142857142857,
+ "cues": [
+  {
+   "t": 0.0,
+   "type": "heart"
+  },
+  {
+   "t": 0.0,
+   "type": "chime"
+  },
+  {
+   "t": 0.0,
+   "type": "cut",
+   "section": "circle"
+  },
+  {
+   "t": 0.4286,
+   "type": "heart"
+  },
+  {
+   "t": 0.8571,
+   "type": "heart"
+  },
+  {
+   "t": 1.2857,
+   "type": "heart"
+  },
+  {
+   "t": 1.7143,
+   "type": "heart"
+  },
+  {
+   "t": 1.7143,
+   "type": "chime"
+  },
+  {
+   "t": 2.1429,
+   "type": "heart"
+  },
+  {
+   "t": 2.5714,
+   "type": "heart"
+  },
+  {
+   "t": 3.0,
+   "type": "heart"
+  },
+  {
+   "t": 3.4286,
+   "type": "heart"
+  },
+  {
+   "t": 3.4286,
+   "type": "chime"
+  },
+  {
+   "t": 3.8571,
+   "type": "heart"
+  },
+  {
+   "t": 4.2857,
+   "type": "heart"
+  },
+  {
+   "t": 4.7143,
+   "type": "heart"
+  },
+  {
+   "t": 5.1429,
+   "type": "kick"
+  },
+  {
+   "t": 5.1429,
+   "type": "cut",
+   "section": "fall"
+  },
+  {
+   "t": 5.5714,
+   "type": "kick"
+  },
+  {
+   "t": 6.0,
+   "type": "kick"
+  },
+  {
+   "t": 6.4286,
+   "type": "kick"
+  },
+  {
+   "t": 6.8571,
+   "type": "kick"
+  },
+  {
+   "t": 7.2857,
+   "type": "kick"
+  },
+  {
+   "t": 7.7143,
+   "type": "kick"
+  },
+  {
+   "t": 8.1429,
+   "type": "kick"
+  },
+  {
+   "t": 8.5714,
+   "type": "kick"
+  },
+  {
+   "t": 9.0,
+   "type": "kick"
+  },
+  {
+   "t": 9.4286,
+   "type": "kick"
+  },
+  {
+   "t": 9.8571,
+   "type": "kick"
+  },
+  {
+   "t": 10.2857,
+   "type": "kick"
+  },
+  {
+   "t": 10.2857,
+   "type": "cut",
+   "section": "array"
+  },
+  {
+   "t": 10.7143,
+   "type": "kick"
+  },
+  {
+   "t": 11.1429,
+   "type": "kick"
+  },
+  {
+   "t": 11.5714,
+   "type": "kick"
+  },
+  {
+   "t": 12.0,
+   "type": "kick"
+  },
+  {
+   "t": 12.4286,
+   "type": "kick"
+  },
+  {
+   "t": 12.8571,
+   "type": "kick"
+  },
+  {
+   "t": 13.2857,
+   "type": "kick"
+  },
+  {
+   "t": 13.7143,
+   "type": "kick"
+  },
+  {
+   "t": 14.1429,
+   "type": "kick"
+  },
+  {
+   "t": 14.5714,
+   "type": "kick"
+  },
+  {
+   "t": 15.0,
+   "type": "kick"
+  },
+  {
+   "t": 15.4286,
+   "type": "kick"
+  },
+  {
+   "t": 15.4286,
+   "type": "cut",
+   "section": "bottle"
+  },
+  {
+   "t": 15.8571,
+   "type": "kick"
+  },
+  {
+   "t": 15.8571,
+   "type": "snare"
+  },
+  {
+   "t": 16.2857,
+   "type": "kick"
+  },
+  {
+   "t": 16.7143,
+   "type": "kick"
+  },
+  {
+   "t": 16.7143,
+   "type": "snare"
+  },
+  {
+   "t": 17.1429,
+   "type": "kick"
+  },
+  {
+   "t": 17.5714,
+   "type": "kick"
+  },
+  {
+   "t": 17.5714,
+   "type": "snare"
+  },
+  {
+   "t": 18.0,
+   "type": "kick"
+  },
+  {
+   "t": 18.4286,
+   "type": "kick"
+  },
+  {
+   "t": 18.4286,
+   "type": "snare"
+  },
+  {
+   "t": 18.8571,
+   "type": "kick"
+  },
+  {
+   "t": 19.2857,
+   "type": "kick"
+  },
+  {
+   "t": 19.2857,
+   "type": "snare"
+  },
+  {
+   "t": 19.7143,
+   "type": "kick"
+  },
+  {
+   "t": 20.1429,
+   "type": "kick"
+  },
+  {
+   "t": 20.1429,
+   "type": "snare"
+  },
+  {
+   "t": 20.5714,
+   "type": "kick"
+  },
+  {
+   "t": 20.5714,
+   "type": "cut",
+   "section": "chat"
+  },
+  {
+   "t": 21.0,
+   "type": "kick"
+  },
+  {
+   "t": 21.0,
+   "type": "snare"
+  },
+  {
+   "t": 21.4286,
+   "type": "kick"
+  },
+  {
+   "t": 21.8571,
+   "type": "kick"
+  },
+  {
+   "t": 21.8571,
+   "type": "snare"
+  },
+  {
+   "t": 22.2857,
+   "type": "kick"
+  },
+  {
+   "t": 22.7143,
+   "type": "kick"
+  },
+  {
+   "t": 22.7143,
+   "type": "snare"
+  },
+  {
+   "t": 23.1429,
+   "type": "kick"
+  },
+  {
+   "t": 23.5714,
+   "type": "kick"
+  },
+  {
+   "t": 23.5714,
+   "type": "snare"
+  },
+  {
+   "t": 24.0,
+   "type": "kick"
+  },
+  {
+   "t": 24.4286,
+   "type": "kick"
+  },
+  {
+   "t": 24.4286,
+   "type": "snare"
+  },
+  {
+   "t": 24.8571,
+   "type": "kick"
+  },
+  {
+   "t": 25.2857,
+   "type": "kick"
+  },
+  {
+   "t": 25.2857,
+   "type": "snare"
+  },
+  {
+   "t": 25.7143,
+   "type": "kick"
+  },
+  {
+   "t": 25.7143,
+   "type": "cut",
+   "section": "crew"
+  },
+  {
+   "t": 26.1429,
+   "type": "kick"
+  },
+  {
+   "t": 26.1429,
+   "type": "snare"
+  },
+  {
+   "t": 26.5714,
+   "type": "kick"
+  },
+  {
+   "t": 27.0,
+   "type": "kick"
+  },
+  {
+   "t": 27.0,
+   "type": "snare"
+  },
+  {
+   "t": 27.4286,
+   "type": "kick"
+  },
+  {
+   "t": 27.8571,
+   "type": "kick"
+  },
+  {
+   "t": 27.8571,
+   "type": "snare"
+  },
+  {
+   "t": 28.2857,
+   "type": "kick"
+  },
+  {
+   "t": 28.7143,
+   "type": "kick"
+  },
+  {
+   "t": 28.7143,
+   "type": "snare"
+  },
+  {
+   "t": 29.1429,
+   "type": "kick"
+  },
+  {
+   "t": 29.5714,
+   "type": "kick"
+  },
+  {
+   "t": 29.5714,
+   "type": "snare"
+  },
+  {
+   "t": 30.0,
+   "type": "kick"
+  },
+  {
+   "t": 30.4286,
+   "type": "kick"
+  },
+  {
+   "t": 30.4286,
+   "type": "snare"
+  },
+  {
+   "t": 30.8571,
+   "type": "kick"
+  },
+  {
+   "t": 30.8571,
+   "type": "cut",
+   "section": "climax"
+  },
+  {
+   "t": 31.2857,
+   "type": "kick"
+  },
+  {
+   "t": 31.2857,
+   "type": "snare"
+  },
+  {
+   "t": 31.7143,
+   "type": "kick"
+  },
+  {
+   "t": 32.1429,
+   "type": "kick"
+  },
+  {
+   "t": 32.1429,
+   "type": "snare"
+  },
+  {
+   "t": 32.5714,
+   "type": "kick"
+  },
+  {
+   "t": 33.0,
+   "type": "kick"
+  },
+  {
+   "t": 33.0,
+   "type": "snare"
+  },
+  {
+   "t": 33.4286,
+   "type": "kick"
+  },
+  {
+   "t": 33.8571,
+   "type": "kick"
+  },
+  {
+   "t": 33.8571,
+   "type": "snare"
+  },
+  {
+   "t": 34.2857,
+   "type": "kick"
+  },
+  {
+   "t": 34.7143,
+   "type": "kick"
+  },
+  {
+   "t": 34.7143,
+   "type": "snare"
+  },
+  {
+   "t": 35.1429,
+   "type": "kick"
+  },
+  {
+   "t": 35.5714,
+   "type": "kick"
+  },
+  {
+   "t": 35.5714,
+   "type": "snare"
+  },
+  {
+   "t": 36.0,
+   "type": "kick"
+  },
+  {
+   "t": 36.0,
+   "type": "cut",
+   "section": "plunge"
+  },
+  {
+   "t": 36.4286,
+   "type": "kick"
+  },
+  {
+   "t": 36.4286,
+   "type": "snare"
+  },
+  {
+   "t": 36.8571,
+   "type": "kick"
+  },
+  {
+   "t": 37.7143,
+   "type": "kick"
+  },
+  {
+   "t": 37.7143,
+   "type": "cut",
+   "section": "title"
+  },
+  {
+   "t": 37.7143,
+   "type": "impact"
+  },
+  {
+   "t": 38.1429,
+   "type": "kick"
+  },
+  {
+   "t": 38.5714,
+   "type": "kick"
+  },
+  {
+   "t": 39.0,
+   "type": "kick"
+  },
+  {
+   "t": 39.4286,
+   "type": "kick"
+  },
+  {
+   "t": 39.8571,
+   "type": "kick"
+  },
+  {
+   "t": 40.2857,
+   "type": "kick"
+  },
+  {
+   "t": 40.7143,
+   "type": "kick"
+  },
+  {
+   "t": 41.1429,
+   "type": "kick"
+  }
+ ]
+}
