@@ -9,7 +9,7 @@ DB="${CF_DB:-bote-sa-bote-production}"
 W="npx --yes wrangler"
 
 [ -n "${CLOUDFLARE_API_TOKEN:-}" ] || { echo "Set CLOUDFLARE_API_TOKEN first"; exit 1; }
-$W whoami | grep -iE "account|email" | head -3
+$W whoami 2>/dev/null | grep -iE "account|email" | head -3 || echo "(whoami skipped: token cannot read account details; set CLOUDFLARE_ACCOUNT_ID)"
 
 ID=$($W d1 list --json 2>/dev/null | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const l=JSON.parse(s);const x=l.find(d=>d.name===process.argv[1]);process.stdout.write(x?x.uuid:"")})' "$DB")
 if [ -z "$ID" ]; then

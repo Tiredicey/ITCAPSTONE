@@ -86,6 +86,10 @@ npm test                           # 8 unit tests
 
 ## Deploy
 
+**Live:** https://bote-sa-bote.pages.dev (Cloudflare Pages + D1 `bote-sa-bote-production`, on your own account; deployed 2026-10-23).
+
+If your token can't read account details, set `CLOUDFLARE_ACCOUNT_ID` too.
+
 `npm run deploy` (needs `CLOUDFLARE_API_TOKEN`) runs `deploy/cloudflare.sh`. On first run it writes the real `database_id` into `wrangler.jsonc`; commit that change afterward. Redeploys reuse the same database, so the data stays.
 
 ---
