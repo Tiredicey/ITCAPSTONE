@@ -1,0 +1,24 @@
+[
+ {
+  "file": "ENG-SUB-Witch-SnapYT.App.mp4",
+  "duration": 121.347483,
+  "w": 1920,
+  "h": 1080,
+  "fps": 23.976,
+  "vcodec": "h264",
+  "acodec": "aac",
+  "cuts": 124,
+  "cuts_per_min": 61.3,
+  "median_shot_s": 0.63,
+  "longest_shot_s": 20.54,
+  "first_cut_s": 3.96,
+  "near_still_share": 0.291,
+  "mean_rel_luminance": 0.247,
+  "max_flashes_in_1s": 2,
+  "lufs_i": -9.8,
+  "lra": 8.7,
+  "sample_peak_dbfs": 1.6,
+  "tempo_bpm": 123.0,
+  "cuts_on_beat_share": 0.355
+ }
+]

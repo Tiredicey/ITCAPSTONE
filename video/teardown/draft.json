@@ -1,0 +1,24 @@
+[
+ {
+  "file": "build/bote_sa_bote_master.mp4",
+  "duration": 44.566667,
+  "w": 1280,
+  "h": 720,
+  "fps": 30.0,
+  "vcodec": "h264",
+  "acodec": "aac",
+  "cuts": 5,
+  "cuts_per_min": 6.7,
+  "median_shot_s": 5.15,
+  "longest_shot_s": 15.43,
+  "first_cut_s": 5.17,
+  "near_still_share": 0.464,
+  "mean_rel_luminance": 0.161,
+  "max_flashes_in_1s": 1,
+  "lufs_i": -13.9,
+  "lra": 5.2,
+  "sample_peak_dbfs": -3.5,
+  "tempo_bpm": 143.6,
+  "cuts_on_beat_share": 1.0
+ }
+]

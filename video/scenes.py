@@ -431,7 +431,7 @@ def scene_chat(c, t, u, dur):
         else:
             y += bubble(c, scr.left() + 18, y, scr.width() - 36, msg, who, mine, k, f, fs)
     c.restore()
-    sample_tag(c)
+    sample_tag(c, VELLUM, H - 16)
     tf = font("fell", 44)
     text(c, "One link.", 72, 250, tf, fill(GOLD_HI))
     text(c, "The whole group chat,", 72, 310, tf, fill(VELLUM))
