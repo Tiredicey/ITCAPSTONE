@@ -1,0 +1,107 @@
+:root {
+  --ink: #2b1e12;
+  --paper: #efe4c8;
+  --vellum: #f8f1de;
+  --gold: #8a6420;
+  --gold-leaf: #b08434;
+  --sea: #2f6a73;
+  --muted: #5e4a35;
+  --danger: #8f2a1c;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f1e6cc;
+    --paper: #1d150d;
+    --vellum: #2a1f14;
+    --gold: #d9b066;
+    --gold-leaf: #c99a45;
+    --sea: #6fb1b8;
+    --muted: #c7b392;
+    --danger: #ff9d8a;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1rem/1.55 'Atkinson Hyperlegible', system-ui, sans-serif; }
+
+.page { max-inline-size: 60rem; margin-inline: auto; padding: 1.25rem 1rem 3rem; }
+.masthead { padding-block: 1rem 0.5rem; border-block-end: 2px solid var(--gold-leaf); margin-block-end: 1.25rem; }
+
+h1, h2, h3 { font-family: 'IM Fell English SC', Georgia, serif; font-weight: 400; line-height: 1.15; margin: 0 0 0.4em; }
+h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; }
+
+.eyebrow { margin: 0; color: var(--gold); font-weight: 700; letter-spacing: 0.04em; }
+.lede { max-inline-size: 40rem; font-size: 1.1rem; }
+.hint, .sync, .pct-detail { color: var(--muted); font-size: 0.95rem; }
+
+.panel { background: var(--vellum); border: 1px solid color-mix(in srgb, var(--ink) 25%, transparent); border-radius: 6px; padding: 1rem; margin-block: 1rem; }
+
+label { display: grid; gap: 0.3rem; font-weight: 700; margin-block: 0.6rem; }
+input, textarea, select { font: inherit; font-size: 16px; color: var(--ink); background: var(--paper); border: 1px solid color-mix(in srgb, var(--ink) 45%, transparent); border-radius: 4px; padding: 0.55rem 0.6rem; min-block-size: 44px; inline-size: 100%; }
+:focus-visible { outline: 3px solid var(--gold-leaf); outline-offset: 2px; }
+
+.btn { font: inherit; font-weight: 700; min-block-size: 44px; padding: 0.5rem 1rem; border-radius: 4px; border: 2px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; transition: background-color 120ms ease-out, transform 120ms ease-out; }
+.btn:hover { background: color-mix(in srgb, var(--gold-leaf) 20%, transparent); }
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--ink); color: var(--paper); }
+.btn.primary:hover { background: color-mix(in srgb, var(--ink) 85%, var(--gold-leaf)); }
+.btn.small { padding: 0.25rem 0.6rem; font-size: 0.9rem; }
+.btn.ghost { border-color: transparent; color: var(--danger); }
+.btn:disabled { opacity: 0.6; cursor: progress; }
+.form-error { color: var(--danger); font-weight: 700; }
+
+.bottle-wrap { display: grid; gap: 0.5rem; align-items: center; }
+@media (min-width: 760px) { .bottle-wrap { grid-template-columns: 2fr 1fr; } }
+.bottle-figure { margin: 0; }
+#bottle { inline-size: 100%; block-size: auto; display: block; }
+#bottle.settle .ship { animation: bob 900ms ease-out 1; }
+@keyframes bob { from { transform: translateY(-6px); } to { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { #bottle.settle .ship { animation: none; } .btn { transition: none; } }
+
+.readout { text-align: center; }
+.pct { font-family: 'IM Fell English SC', Georgia, serif; font-size: clamp(3.5rem, 12vw, 5.5rem); line-height: 1; margin: 0; font-variant-numeric: tabular-nums; }
+.pct .unit { font-size: 0.5em; color: var(--gold); }
+
+.share { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-block: 1rem 0.25rem; }
+
+.milestones { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+.milestone { border-block-start: 1px dashed color-mix(in srgb, var(--ink) 35%, transparent); padding-block-start: 0.75rem; }
+.ms-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; }
+.ms-head h3 { margin: 0; flex: 1 1 12rem; }
+.ms-count { color: var(--muted); font-variant-numeric: tabular-nums; }
+.meter { block-size: 8px; background: color-mix(in srgb, var(--ink) 15%, transparent); border-radius: 4px; overflow: hidden; margin-block: 0.4rem; }
+.meter span { display: block; block-size: 100%; background: var(--sea); }
+
+.tasks { list-style: none; padding: 0; margin: 0.25rem 0; display: grid; gap: 0.35rem; }
+.task { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.task select { inline-size: auto; }
+.task-title { flex: 1 1 10rem; }
+.task.done .task-title { text-decoration: line-through; color: var(--muted); }
+.who { color: var(--muted); font-size: 0.9rem; }
+.chip { font-size: 0.85rem; font-weight: 700; padding: 0.1rem 0.5rem; border-radius: 999px; border: 1px solid currentColor; }
+.chip.done { color: var(--sea); }
+.chip.doing { color: var(--gold); }
+.chip.todo { color: var(--muted); }
+
+.inline-form { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: end; }
+.inline-form label { margin: 0; }
+.inline-form .grow { flex: 1 1 12rem; }
+.inline-form select { inline-size: auto; }
+
+.crew { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+.member { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; }
+.role, .stat { color: var(--muted); }
+.stat { margin-inline-start: auto; font-variant-numeric: tabular-nums; }
+
+.activity { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.3rem; }
+.activity time { color: var(--gold); font-variant-numeric: tabular-nums; font-weight: 700; }
+
+.empty { color: var(--muted); }
+.foot { margin-block-start: 2rem; }
+a { color: var(--ink); text-underline-offset: 3px; }
+[hidden] { display: none !important; }
