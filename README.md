@@ -38,10 +38,38 @@ Cloudflare D1 (SQLite). Tables: `projects`, `members`, `milestones`, `tasks`, `a
 
 ## Limits, stated plainly
 
-- **"Inside Messenger"**: Meta's Messenger Platform supports page-to-user conversations, not bots posting into group chats (Meta developer forum answer, read 2026-10-23: https://developers.facebook.com/community/threads/361517551165694/). So the bottle lives at a link, with an unfurl card and pasteable text. It does not post into the chat by itself.
+- **"Inside Messenger"**: Meta's official Messenger Platform supports page-to-user conversations only, not bots in group chats (Meta developer forum, read 2026-10-23: https://developers.facebook.com/community/threads/361517551165694/). The chat side therefore runs through [Heisenbot](https://github.com/Tiredicey/Heisenbot), which uses a second Facebook account in a real browser. That's unofficial automation: Facebook may ask that account for a security check (Heisenbot alerts you and gives you a remote login), and it could restrict the account. Use a burner account, never your main one.
 - **"100% accurate"**: the math is exact and tested, but the bottle only knows what the team marks done. It cannot verify the work itself.
 - **"Realtime"**: about 4 s polling, not push. That fits Cloudflare's request model without a WebSocket server.
 - **Messenger preview caching**: Meta may cache the unfurl image for a while after the first share. The `?v=` version number on the image URL helps; the page itself is always live.
+
+## Setup guide: what you do (about 15 minutes, once)
+
+Everything else is automatic. These are the only steps that need you, because each one needs your own account or a password.
+
+**1. Put the bottle online (pick one).**
+- **Easiest, no card needed:** in this Genspark project, ask "deploy with hosted deploy". You approve one prompt, then copy the `https://…` address it gives you.
+- **Your own Cloudflare account:** create a free account, paste an API token in the project's Deploy panel, then ask "deploy to my Cloudflare". You get a `https://….pages.dev` address.
+
+**2. Tell Walter where the bottle lives.** Open the Heisenbot dashboard → **Capstone bottle** → paste the address from step 1 → **Save** → **Test**. Test creates your bottle and shows the summary.
+
+**3. Turn Walter live.** In the dashboard, switch off **Dry run** and press **Start**. Walter posts the bottle link in the group chat once. From then on, members just type `!done …`, `!task …`, `!bottle`, `!teaser`.
+
+That's it. There's no app to install, no account for members, and nobody has to paste the link.
+
+## Where the MP4s are
+
+They're too large for git, so they're attached to the GitHub Release **film-v1** (permanent public links):
+
+| File | Use it for | Size |
+|---|---|---|
+| [bote_sa_bote_master.mp4](https://github.com/Tiredicey/ITCAPSTONE/releases/download/film-v1/bote_sa_bote_master.mp4) | 16:9: defense presentation, YouTube, projector | 133 MB |
+| [bote_sa_bote_9x16.mp4](https://github.com/Tiredicey/ITCAPSTONE/releases/download/film-v1/bote_sa_bote_9x16.mp4) | 9:16: Facebook Reels, TikTok, Stories | 112 MB |
+| [bote_sa_bote_messenger.mp4](https://github.com/Tiredicey/ITCAPSTONE/releases/download/film-v1/bote_sa_bote_messenger.mp4) | Messenger: under the 25 MB in-chat limit; Walter sends this one on `!teaser` | 18 MB |
+
+MD5 checksums are in `SHA_MD5.txt` on the same release. Don't commit MP4s into this repo: they bloat every clone forever.
+
+The 25 MB Messenger figure comes from user reports, which conflict (a 2025 article says Messenger raised the limit to 100 MB). At 18 MB the Messenger cut is under both, so it works either way.
 
 ## Run locally
 
