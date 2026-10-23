@@ -1,10 +1,10 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "webapp",
+  "name": "bote-sa-bote",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat"],
   "pages_build_output_dir": "./dist",
   "d1_databases": [
-    { "binding": "DB", "database_name": "webapp-production", "database_id": "local-only-replace-on-deploy" }
+    { "binding": "DB", "database_name": "bote-sa-bote-production", "database_id": "local-only-replace-on-deploy" }
   ]
 }

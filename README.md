@@ -47,9 +47,12 @@ Cloudflare D1 (SQLite). Tables: `projects`, `members`, `milestones`, `tasks`, `a
 
 Everything else is automatic. These are the only steps that need you, because each one needs your own account or a password.
 
-**1. Put the bottle online (pick one).**
-- **Easiest, no card needed:** in this Genspark project, ask "deploy with hosted deploy". You approve one prompt, then copy the `https://…` address it gives you.
-- **Your own Cloudflare account:** create a free account, paste an API token in the project's Deploy panel, then ask "deploy to my Cloudflare". You get a `https://….pages.dev` address.
+**1. Put the bottle online (your own Cloudflare account, free).**
+1. Sign up at dash.cloudflare.com (free plan, no card).
+2. My Profile → API Tokens → Create Token → **Create Custom Token** with two permissions: *Account · Cloudflare Pages · Edit* and *Account · D1 · Edit*.
+3. Paste the token in this Genspark project's **Deploy** panel and say "deploy". Or run it yourself: `CLOUDFLARE_API_TOKEN=… npm run deploy`.
+
+`deploy/cloudflare.sh` creates the D1 database, applies the migration, creates the Pages project `bote-sa-bote` and deploys. You get `https://bote-sa-bote.pages.dev`, or a `-2` suffix if that name is taken. It's safe to re-run.
 
 **2. Tell Walter where the bottle lives.** Open the Heisenbot dashboard → **Capstone bottle** → paste the address from step 1 → **Save** → **Test**. Test creates your bottle and shows the summary.
 
@@ -76,14 +79,14 @@ The 25 MB Messenger figure comes from user reports, which conflict (a 2025 artic
 ```bash
 npm install
 npm run build
-npx wrangler d1 migrations apply webapp-production --local
+npx wrangler d1 migrations apply bote-sa-bote-production --local
 pm2 start ecosystem.config.cjs     # serves on :3000
 npm test                           # 8 unit tests
 ```
 
-## Deploy (not done yet)
+## Deploy
 
-`wrangler.jsonc` has a placeholder `database_id`. Create the D1 database, put its id there, run `npm run db:migrate:prod`, then deploy with your Cloudflare token or the platform's hosted deploy.
+`npm run deploy` (needs `CLOUDFLARE_API_TOKEN`) runs `deploy/cloudflare.sh`. On first run it writes the real `database_id` into `wrangler.jsonc`; commit that change afterward. Redeploys reuse the same database, so the data stays.
 
 ---
 
